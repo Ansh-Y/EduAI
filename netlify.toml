@@ -1,0 +1,21 @@
+[build]
+  base = "frontend"
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://stands-wireless-petite-identifying.trycloudflare.com/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/storage/*"
+  to = "https://stands-wireless-petite-identifying.trycloudflare.com/storage/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
